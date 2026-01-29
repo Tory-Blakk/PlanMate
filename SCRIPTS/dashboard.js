@@ -59,7 +59,7 @@ renderedProjects.forEach((project) => {
   card.addEventListener('click', () => {
     const projectId = card.dataset.projectid; // optional if you want to pass ID
     // navigate to another page
-    window.location.href = `../HTML/projectInfo.html?id=${projectId}`;
+    window.location.href = `../projectInfo.html?id=${projectId}`;
   });
 });
 

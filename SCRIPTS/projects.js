@@ -156,7 +156,7 @@ document.querySelectorAll(".cancel")?.forEach(button => {
 // Open project button in modal
 document.querySelector(".popup-modal .open")?.addEventListener("click", () => {
   if (selectedProjectId) {
-    window.location.href = `../HTML/projectInfo.html?id=${selectedProjectId}`;
+    window.location.href = `../projectInfo.html?id=${selectedProjectId}`;
   }
 });
 
