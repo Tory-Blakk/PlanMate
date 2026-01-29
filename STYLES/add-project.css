@@ -1,0 +1,189 @@
+.addProject
+{
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  transition: 0.7s ease;
+}
+
+.addProject *
+{
+  font-size: 62.5%;
+  
+}
+
+
+.addProject #projectForm
+{
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 93%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3rem;
+  padding: 3rem;
+  width: 40%;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.7s ease;
+  will-change: transform;
+}
+
+.addProject #subtasks
+{
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 60%;
+  padding: 3rem;
+  width: 40%;
+  border-radius: 3rem;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease;
+  
+  
+}
+
+@keyframes slideUp
+{
+  from
+  {
+    transform: translateY(100%) scale(0.8);
+  }
+  to
+  {
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes slideDown
+{
+  from
+  {
+    transform: translateY(0);
+  }
+  to
+  {
+    transform: translateY(100%)
+  }
+}
+
+@keyframes shrink
+{
+  from
+  {
+    transform: scale(1);
+  }
+  to
+  {
+    transform: scale(0.7);
+  }
+}
+  
+.addProject form h1
+{
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.addProject form label
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+.addProject form label *
+{
+    margin: 0.8rem 0;
+    border-radius: 0.6rem;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgba(0, 0, 0, 0.2);
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+  
+.addProject form label *:focus
+{
+  outline: none;
+}
+
+.description
+{
+    height: 8rem !important;
+}
+.description::placeholder
+{
+  vertical-align: top;
+  text-wrap: wrap;
+}
+
+.buttons
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+
+
+.actionButton
+{
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s ease;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+
+.actionButton:hover
+{
+  opacity: 0.8;
+}
+.actionButton:active
+{
+  opacity: 0.5;
+}
+.cancelButton
+{
+  width: 100%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s ease;
+  text-decoration: underline;
+  color: blue;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+.cancelButton:hover
+{
+  opacity: 1;
+  background-color: rgba(216, 194, 194, 0.223);
+}
+
+
+
+
+
+.hide
+{
+  display: none;
+}
+
+  

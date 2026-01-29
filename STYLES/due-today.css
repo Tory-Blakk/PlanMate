@@ -1,0 +1,154 @@
+:root
+{
+  /*Primary Colors*/
+  --primary-color: #4A7CFF  /* (calm, modern blue) */;
+  --primary-light: #E7EEFF;
+  --primary-dark: #2D4FBF;
+  
+  /*Accent Colors*/
+  --high-priority: #FF5A5A;
+  --medium-priority: #FFA534;
+  --low-priority: #3CC18D;
+
+  /* Light Mode */
+  --light-background: #F7F9FB;
+  --light-card: #FFFFFF;
+  --light-text-primary: #1A1E27;
+  --light-text-secondary: #5F6672;
+  --light-border: #E5E9EF;
+  
+  /* Dark Mode */
+  --dark-background: #0F1217;
+  --dark-card: #171B22;
+  --dark-text-primary: #E8EBF1;
+  --dark-text-secondary: #9BA2AE;
+  --dark-border: #222831;
+
+  /* Progress Bar Colors */
+  --background-light: #DCE2ED   /*light*/;
+  --background-dark: #2A303C   /*dark*/;
+  /* Fill: use primary blue above. */
+
+  --width: clamp(200px, 20vw, 300px);
+
+}
+
+
+*
+{
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+html
+{
+  font-size: 85%;
+}
+body
+{
+  margin: 2rem;
+  margin-left: calc(2rem + var(--width));
+  transition: 0.7s ease;
+  background-color: #e0f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: scroll;
+}
+
+
+header
+{
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .date
+{
+  margin-top: 0.7rem;
+  opacity: 0.5;
+}
+
+ul li
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(85vw - var(--width));;
+  border-radius: 0.8rem;
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+ul li:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0.995);
+  opacity: 0.8;
+}
+
+ul li .project-title
+{
+  width: 20%;      /* adjust as needed */
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  font-weight: bold;
+}
+ul li *
+{
+  flex-shrink: 0;
+}
+ul li .subtask-no
+{
+  opacity: 0.6;
+  width: 30%;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  text-align: center;
+
+
+}
+ul li .priority-container
+{
+  width: 20%;
+  text-align: end;
+}
+
+ul li .priority
+{
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.ul li .priority:hover {
+  transform: scale(1.05);
+}
+
+.no-projects
+{
+  font-size: 1.5rem;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  overflow: hidden;
+}

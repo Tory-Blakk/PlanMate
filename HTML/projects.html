@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <link rel="stylesheet" href="../STYLES/projects.css">
+</head>
+<body>
+  <aside class="sidebar"></aside>
+
+  <header>
+    <div class="top">
+    <h1 class="page-title">Projects</h1>
+    <a href="dashboard.html?openPanel=true""><button id="projectsAddBtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-plus-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+      </svg> Add Project
+    </button></a>
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+        <input type="search" id="searchBar" placeholder="Search projects..." id="searchInput">
+      </div>
+
+      <div class="right">
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+  <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+</svg></button>
+<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+</svg></button>
+      </div>
+    </div>
+
+  </header>
+
+  <main id="projectsContainer">
+    <table>
+      <thead>
+        <tr>
+          <th>PROJECT NAME</th>
+          <th>STATUS</th>
+          <th>PROGRESS</th>
+          <th>DUE DATE</th>
+          <th>PRIORITY</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+      </tbody>
+    </table>
+
+
+    <div class="popup-modal one hide" id="js-popup-modal">
+      <p class="warning"></p>
+
+      <div class="buttons">
+        <button class="cancel open">Open</button>
+      <button id="next">Delete</button>
+    </div>
+  </div>
+    <div class="popup-modal two hide" id="confirmation-modal">
+      <p>This project would be permanently deleted and can <b>NOT</b> be recovered.</p>
+      <div class="buttons">
+      <button id="delete">Confirm</button>
+      <button class="cancel">Cancel</button>
+      </div>
+    </div>
+
+  <script type="module" src="../SCRIPTS/projects.js"></script>
+  <script src="../SCRIPTS/script.js"></script>
+</body>
+</html>

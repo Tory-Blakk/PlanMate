@@ -1,0 +1,232 @@
+:root
+{
+  /*Primary Colors*/
+  --primary-color: #4A7CFF  /* (calm, modern blue) */;
+  --primary-light: #E7EEFF;
+  --primary-dark: #2D4FBF;
+  
+  /*Accent Colors*/
+  --high-priority: #FF5A5A;
+  --medium-priority: #FFA534;
+  --low-priority: #3CC18D;
+
+  /* Light Mode */
+  --light-background: #F7F9FB;
+  --light-card: #FFFFFF;
+  --light-text-primary: #1A1E27;
+  --light-text-secondary: #5F6672;
+  --light-border: #E5E9EF;
+  
+  /* Dark Mode */
+  --dark-background: #0F1217;
+  --dark-card: #171B22;
+  --dark-text-primary: #E8EBF1;
+  --dark-text-secondary: #9BA2AE;
+  --dark-border: #222831;
+
+  /* Progress Bar Colors */
+  --background-light: #DCE2ED   /*light*/;
+  --background-dark: #2A303C   /*dark*/;
+  /* Fill: use primary blue above. */
+
+  --width: clamp(200px, 20vw, 300px);
+
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+
+html
+{
+  font-size: 85%;
+}
+body
+{
+  background-color: var(--light-background);
+  margin: 2rem 4rem 2rem calc(4rem + var(--width));
+  transition: 0.7s ease;
+}
+
+.title
+{
+  font-weight: bolder;
+}
+.project-description
+{
+  opacity: 0.8;
+  margin: 1rem 0 2rem 0;
+}
+
+.card
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.147);
+}
+.card .top
+{
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  border-bottom: solid thin rgba(73, 70, 70, 0.305);
+}
+
+.card .top div
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 3rem;
+}
+.card .top div .up
+{
+  opacity: 0.5;
+}
+.card .top div .down
+{
+  font-weight: bold;
+}
+
+.card .bottom
+{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.card .bottom .up
+{
+  display: flex;
+  justify-content: space-between;
+}
+.card .bottom .up .progressPercent
+{
+  color: rgb(139, 139, 228);
+  font-weight: bold;
+}
+
+.card .bottom .progressbar
+{
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 2rem;
+  height: 0.7rem;
+  background-color: #d1d7e1;
+}
+.card .bottom .progressbar .progress
+{
+  width: 60%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: rgb(139, 139, 228);
+}
+
+
+
+.subtasks
+{
+  margin-top: 4rem;
+}
+
+.subtasks .top
+{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.subtask-list
+{
+  position: relative;
+  height: 25rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.147);
+  overflow-y: scroll;
+}
+
+.subtask-list li .checkbox
+{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.subtask-list li .checkbox .left
+{
+  display: flex;
+  align-items: center;
+}
+.subtask-list li .checkbox .right
+{
+  opacity: 0.5;
+}
+.subtask-list li .checkbox .right .priority
+{
+  background-color: pink;
+  padding: 3px 10px;
+  margin-left: 2rem;
+  border-radius: 2rem;
+  color: rgb(99, 3, 3);
+}
+
+.subtasks .checkbox input[type="checkbox"]
+{
+  display: none;
+}
+.subtasks .checkbox .custom-checkbox
+{
+  width: 18px;
+  height: 18px;
+  border-radius: 7px;
+  border: 1.5px solid #5555554e;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.subtasks .checkbox input[type="checkbox"]:checked + .custom-checkbox::after
+{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgb(22, 31, 122);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.addSubtaskBtn
+{
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  background-color: rgb(64, 64, 205);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 11rem;
+}
+
+.addSubtaskSection
+{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+}

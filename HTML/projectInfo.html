@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../STYLES/projectInfo.css">
+</head>
+<body>
+  <aside class="sidebar"></aside>
+
+
+  <section id="projectDetails">
+    <h1 class="title">Website Rediesign Q3</h1>
+    <p class="project-description">A brief paragraph summarizing the project goals and main objecttives for the third quarter. The aim is to enhance user experience and modernize the UI.</p>
+
+    <div class="card">
+      <div class="top">
+        <div>
+          <p class="up">Start Date</p>
+          <p class="down">August 1, 2025</p>
+        </div>
+        <div>
+          <p class="up">Due Date</p>
+          <p class="down">September 30, 2025</p>
+        </div>
+        <div>
+          <p class="up">Priority</p>
+          <p class="down">High</p>
+        </div>
+        <div>
+          <p class="up">Status</p>
+          <p class="down">In progress</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="up">
+          <p>Overall Progress</p>
+          <p class="progressPercent">65%</p>
+        </div>
+        <div class="progressbar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="subtasks">
+      <div class="top">
+        <h2>Subtasks</h2>
+        <button class="addSubtaskBtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+          </svg> Add Subtask
+        </button>
+      </div>
+
+      <div class="addSubtaskSection">
+        <input type="text" id="subtaskInput" placeholder="Enter subtask description">
+        <button id="submitSubtask">Add</button>
+      </div>
+
+      <div style="position: relative;">
+        <ul class="subtask-list">
+
+        </ul>
+        <button id="completeSubtasks" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); padding: 1rem 1.5rem; border-radius: 1rem; border: none; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.334);">Complete Selected</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script type="module" src="../SCRIPTS/projectInfo.js"></script>
+</body>
+</html>
